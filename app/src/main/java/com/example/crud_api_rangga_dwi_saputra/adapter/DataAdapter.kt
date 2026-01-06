@@ -15,13 +15,14 @@ class DataAdapter(val data: List<DataItem>? , private val click: onClickItem) : 
             binding.tvName.text = get?.staffName
             binding.tvPhone.text = get?.staffHp
             binding.tvAddress.text = get?.staffAlamat
+            binding.tvPekerjaan.text = get?.staffPekerjaan
+            binding.tvHobi.text = get?.staffHobi
 
-            // Click Listener untuk Update (Klik Nama/Item)
-            binding.tvName.setOnClickListener() {
+            // KLIK BEBAS DI SELURUH ITEM
+            binding.root.setOnClickListener {
                 click.clicked(get)
             }
 
-            // Click Listener untuk Delete (Klik Tombol Hapus)
             binding.btnHapus.setOnClickListener {
                 click.delete(get)
             }

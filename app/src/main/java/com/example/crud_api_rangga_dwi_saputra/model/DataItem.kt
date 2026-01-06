@@ -4,12 +4,22 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 class DataItem : Serializable {
-    @field:SerializedName("staff_name")
-    val staffName: String? = null
-    @field:SerializedName("staff_id")
+
+    @SerializedName("staff_id")
     val staffId: String? = null
-    @field:SerializedName("staff_hp")
+
+    @SerializedName("staff_name")
+    val staffName: String? = null
+
+    @SerializedName("staff_hp")
     val staffHp: String? = null
-    @field:SerializedName("staff_alamat")
+
+    @SerializedName("staff_alamat")
     val staffAlamat: String? = null
+
+    @SerializedName("staff_pekerjaan")
+    val staffPekerjaan: String? = null
+
+    @SerializedName("staff_hobi")
+    val staffHobi: String? = null
 }
